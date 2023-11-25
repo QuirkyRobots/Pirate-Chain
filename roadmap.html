@@ -10,80 +10,73 @@ body {
     background-color: #171621;
     font-family: Arial, sans-serif;
     color: #fff;
-    line-height: 1.6; /* Adjust line height for better readability */
+    line-height: 1.6;
 }
 
 .roadmap-container {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 2rem;
-    padding: 3rem;
+    padding: 2rem 3rem;
     position: relative;
+}
 
-    &:before {
-        content: '';
-        position: absolute;
-        left: 50%;
-        top: 0;
-        bottom: 0;
-        width: 2px;
-        background-color: gold;
-        transform: translateX(-50%);
-    }
-
-    @media (max-width: 768px) {
-        grid-template-columns: 1fr;
-        padding: 3rem;
-
-        &:before {
-            left: 3rem; /* Align the gold line with the padding on smaller screens */
-        }
-    }
+.roadmap-container::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: gold;
+    transform: translateX(-50%);
 }
 
 .year-section {
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.1); /* Light background color */
     color: #000;
     border-radius: 5px;
     padding: 1rem;
     position: relative;
     z-index: 1;
-    font-size: clamp(0.8rem, 2.5vw, 1.1rem); /* Fluid text size */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    font-size: clamp(0.8rem, 2.5vw, 1.1rem);
+    margin: 0 2rem; /* Add margin to position closer to the center line */
+    flex: 1;
 
     &:nth-of-type(odd) {
-        grid-column: 1;
-        align-self: start;
+        align-self: flex-end;
+        &:before {
+            content: url('Pirate_Logo_P_Gold.svg');
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            left: -15px; /* Adjust this value so it touches the center line */
+            top: 50%;
+            transform: translateY(-50%);
+        }
     }
     
     &:nth-of-type(even) {
-        grid-column: 2;
-        align-self: end;
-    }
-
-    &:before { /* Icon */
-        content: url('Pirate_Logo_P_Gold.svg'); /* Adjust icon path as needed */
-        position: absolute;
-        width: 30px; /* Set the icon size */
-        height: 30px; /* Set the icon size */
-        left: calc(50% - 15px); /* Center the icon */
-        top: calc(100% + 5px); /* Position below the section */
-        z-index: 2;
+        align-self: flex-start;
+        &:before {
+            content: url('Pirate_Logo_P_Gold.svg');
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            right: -15px; /* Adjust this value so it touches the center line */
+            top: 50%;
+            transform: translateY(-50%);
+        }
     }
 
     @media (max-width: 768px) {
-        &:nth-of-type(odd),
-        &:nth-of-type(even) {
-            grid-column: auto;
-            align-self: center;
-        }
-
+        align-self: center;
         &:before {
-            left: 50%; /* Center icon on top of the section */
-            top: calc(-100% - 30px); /* Position above the section */
-            transform: translate(-50%, -50%);
+            position: absolute;
+            top: -40px; /* Adjust icon above the box */
+            left: 50%;
+            transform: translateX(-50%);
         }
     }
 }
