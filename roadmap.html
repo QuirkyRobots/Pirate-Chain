@@ -4,37 +4,75 @@
     <meta charset="UTF-8">
     <title>Pirate Chain Roadmap</title>
     <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #171621;
+    font-family: Arial, sans-serif;
+    color: #fff;
+}
+
+.roadmap-container {
+    display: grid;
+    gap: 1rem;
+    padding: 3rem;
+    grid-template-columns: 1fr;
+    position: relative;
+
+    @media (max-width: 600px) {
+        padding: 3rem;
+        &:before {
+            left: 3rem; /* Adjust the gold line position on smaller screens */
         }
+    }
 
-        .roadmap-container {
-            display: grid;
-            gap: 1rem;
-            grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
-            padding: 1rem;
+    &:before { /* Gold line */
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background-color: gold;
+        transform: translateX(-50%);
+    }
+}
 
-            @media only screen and (min-width: 600px) {
-                grid-template-columns: repeat(2, 1fr);
-            }
+.year-section {
+    background-color: #fff;
+    color: #000;
+    border-radius: 5px;
+    padding: 1rem;
+    position: relative;
+    z-index: 1;
+    font-size: clamp(0.8rem, 2.5vw, 1.1rem); /* Fluid text size */
+
+    &:before { /* Icon */
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: clamp(20px, 5vw, 30px); /* Fluid icon size */
+        height: clamp(20px, 5vw, 30px); /* Fluid icon size */
+        background-image: url('Pirate_Logo_P_Gold.svg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        z-index: 2;
+    }
+
+    @media (max-width: 600px) {
+        text-align: center;
+        &:before {
+            position: absolute;
+            top: -3rem; /* Move icon above the section on smaller screens */
+            left: 50%;
+            transform: translateX(-50%);
         }
+    }
+}
 
-        .year-section {
-            border: 1px solid #ccc;
-            padding: 1rem;
-            background-color: #f9f9f9;
-
-            @media only screen and (min-width: 600px) {
-                &:nth-child(odd) {
-                    border-right: 1px solid #ccc;
-                }
-
-                &:nth-child(even) {
-                    border-left: 1px solid #ccc;
-                }
-            }
-        }
     </style>
 </head>
 <body>
