@@ -10,32 +10,26 @@ body {
     background-color: #171621;
     font-family: Arial, sans-serif;
     color: #fff;
+    line-height: 1.6; /* Adjust line height for better readability */
 }
 
 .roadmap-container {
     display: grid;
-    gap: 1rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem;
     padding: 3rem;
-    grid-template-columns: 1fr;
     position: relative;
+}
 
-    @media (max-width: 600px) {
-        padding: 3rem;
-        &:before {
-            left: 3rem; /* Adjust the gold line position on smaller screens */
-        }
-    }
-
-    &:before { /* Gold line */
-        content: '';
-        position: absolute;
-        left: 50%;
-        top: 0;
-        bottom: 0;
-        width: 2px;
-        background-color: gold;
-        transform: translateX(-50%);
-    }
+.roadmap-container::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: gold;
+    transform: translateX(-50%);
 }
 
 .year-section {
@@ -46,32 +40,52 @@ body {
     position: relative;
     z-index: 1;
     font-size: clamp(0.8rem, 2.5vw, 1.1rem); /* Fluid text size */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
-    &:before { /* Icon */
-        content: '';
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        width: clamp(20px, 5vw, 30px); /* Fluid icon size */
-        height: clamp(20px, 5vw, 30px); /* Fluid icon size */
-        background-image: url('Pirate_Logo_P_Gold.svg');
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        z-index: 2;
+    &:nth-of-type(odd) {
+        grid-column: 1;
+        align-self: start;
+    }
+    
+    &:nth-of-type(even) {
+        grid-column: 2;
+        align-self: end;
     }
 
-    @media (max-width: 600px) {
-        text-align: center;
+    &:before { /* Icon */
+        content: url('Pirate_Logo_P_Gold.svg'); /* Adjust icon path as needed */
+        position: absolute;
+        width: 30px; /* Set the icon size */
+        height: 30px; /* Set the icon size */
+        left: calc(50% - 15px); /* Center the icon */
+        top: calc(100% + 5px); /* Position below the section */
+        z-index: 2;
+    }
+}
+
+@media (max-width: 768px) {
+    .roadmap-container {
+        grid-template-columns: 1fr;
+        padding: 3rem;
+    }
+
+    .year-section {
+        &:nth-of-type(odd),
+        &:nth-of-type(even) {
+            grid-column: auto;
+            align-self: center;
+        }
+
         &:before {
-            position: absolute;
-            top: -3rem; /* Move icon above the section on smaller screens */
-            left: 50%;
-            transform: translateX(-50%);
+            left: 50%; /* Center icon on top of the section */
+            top: calc(-100% - 30px); /* Position above the section */
+            transform: translate(-50%, -50%);
         }
     }
 }
+
 
     </style>
 </head>
