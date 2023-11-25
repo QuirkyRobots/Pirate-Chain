@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pirate Chain Roadmap</title>
+</head>
+<body>
+    <h1>Pirate Chain Roadmap</h1>
+    <div id="roadmap-container">
+        <!-- Roadmap content will be loaded here -->
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('roadmap.json')
+            .then(response => response.json())
+            .then(data => {
+                const container = document.getElementById('roadmap-container');
+
+                data.milestones.forEach(entry => {
+                    const yearSection = document.createElement('section');
+                    yearSection.innerHTML = `<h2>${entry.year}</h2>`;
+                    entry.events.forEach(event => {
+                        const eventElement = document.createElement('div');
+                        eventElement.textContent = event;
+                        yearSection.appendChild(eventElement);
+                    });
+                    container.appendChild(yearSection);
+                });
+            })
+            .catch(error => console.error('Error fetching data:', error));
+        });
+    </script>
+</body>
+</html>
