@@ -19,17 +19,26 @@ body {
     gap: 2rem;
     padding: 3rem;
     position: relative;
-}
 
-.roadmap-container::before {
-    content: '';
-    position: absolute;
-    left: 50%;
-    top: 0;
-    bottom: 0;
-    width: 2px;
-    background-color: gold;
-    transform: translateX(-50%);
+    &:before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background-color: gold;
+        transform: translateX(-50%);
+    }
+
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+        padding: 3rem;
+
+        &:before {
+            left: 3rem; /* Align the gold line with the padding on smaller screens */
+        }
+    }
 }
 
 .year-section {
@@ -63,15 +72,8 @@ body {
         top: calc(100% + 5px); /* Position below the section */
         z-index: 2;
     }
-}
 
-@media (max-width: 768px) {
-    .roadmap-container {
-        grid-template-columns: 1fr;
-        padding: 3rem;
-    }
-
-    .year-section {
+    @media (max-width: 768px) {
         &:nth-of-type(odd),
         &:nth-of-type(even) {
             grid-column: auto;
@@ -85,7 +87,6 @@ body {
         }
     }
 }
-
 
     </style>
 </head>
