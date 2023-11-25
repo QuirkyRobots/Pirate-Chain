@@ -3,6 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <title>Pirate Chain Roadmap</title>
+        <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .roadmap-container {
+            display: grid;
+            gap: 1rem;
+            grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+            padding: 1rem;
+
+            @media only screen and (min-width: 600px) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .year-section {
+            border: 1px solid #ccc;
+            padding: 1rem;
+            background-color: #f9f9f9;
+
+            @media only screen and (min-width: 600px) {
+                &:nth-child(odd) {
+                    border-right: 1px solid #ccc;
+                }
+
+                &:nth-child(even) {
+                    border-left: 1px solid #ccc;
+                }
+            }
+        }
+    </style>
 </head>
 <body>
     <h1>Pirate Chain Roadmap</h1>
