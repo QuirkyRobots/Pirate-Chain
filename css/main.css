@@ -230,6 +230,13 @@ time {
 .content .pirate-image:hover {
   cursor: zoom-in;
 }
+/* Footer */
+
+footer {
+  height:100px;
+  width: 100%;
+  background:var(--pirate-blue-dark)
+}
 
 /* For smaller screensizes */
 
