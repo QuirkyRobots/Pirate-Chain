@@ -235,7 +235,8 @@ time {
 footer {
   height:100px;
   width: 100%;
-  background:var(--pirate-blue-dark)
+  background: rgb(16 18 24 / 63%);
+  border-top: 2px solid #212634;
 }
 
 /* For smaller screensizes */
