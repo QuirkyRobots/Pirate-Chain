@@ -168,7 +168,7 @@ h1 {
   position: relative;
   border-radius: 6px;
   box-shadow: 6px 7px 30px -3px rgb(0 0 0 / 40%);
-  border: 1px solid var(--pirate-gold);
+  /*border: 1px solid var(--pirate-gold);*/
   transition-duration: var(--pirate-move-normal);
   will-change: transform;
   overflow: hidden;
