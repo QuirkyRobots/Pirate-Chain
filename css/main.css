@@ -1,0 +1,266 @@
+:root {
+  --pirate-gold: #bd974e;
+  --pirate-blue-dark: #1a1d26;
+  --pirate-blue-main: #212635;
+  --pirate-txt-light: #dadce1;
+  --pirate-discord: #36393f;
+
+  --pirate-move-slow: 3s;
+  --pirate-move-normal: 0.6s;
+  --pirate-move-fast: 0.2s;
+}
+
+* {
+  box-sizing: border-box;
+}
+html {
+  margin: 0;
+}
+
+body {
+  position: relative;
+  font-family: Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+  min-width: 360px;
+  margin: 0;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(26, 29, 38, 0.98);
+  z-index: -1;
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("../img/cubebg.jpg") center / cover no-repeat fixed;
+  z-index: -2;
+}
+
+h1 {
+  color: #fff;
+  font-size: 2rem;
+  margin-bottom: 0;
+}
+.pirate-hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100dvh;
+  /*background: rgb(50, 49, 65);*/
+}
+.pirate-hero .hero-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  margin: 0 2rem;
+  width: auto;
+  height: fit-content;
+  padding: 2rem 4rem;
+  padding-top: 2.8rem;
+  border-radius: 1rem;
+  background: var(--pirate-blue-main);
+  box-shadow: 0 0 40px rgb(0 0 0 / 25%);
+  text-align: center;
+}
+.pirate-hero .hero-info p {
+  margin-top: 0.3rem;
+  color: #918c86;
+}
+.pirate-logo {
+  width: 25%;
+}
+.pirate-timeline-start {
+  margin: 0 auto;
+  margin-top: 2rem!important;
+  padding: 1rem 2rem;
+  border: 0.45rem solid var(--pirate-gold);
+  width: 200px;
+}
+.pirate-timeline-start p {
+  width: 100%;
+  font-size: 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--pirate-gold);
+  margin: 0;
+}
+.pirate-timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 8rem 0;
+}
+
+.pirate-timeline::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  background-color: var(--pirate-gold);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+.container {
+  padding: 10px 60px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+.container::after {
+  content: "";
+  position: absolute;
+  right: -21px;
+  width: 25px;
+  height: 25px;
+  background-image: url("../img/Pirate_Logo_P_Gold.svg");
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: var(--pirate-blue-dark);
+  padding: 5px;
+  top: 15px;
+  border: 4px solid var(--pirate-gold);
+  border-radius: 50%;
+  z-index: 1;
+  transform: rotate(0deg);
+  transition: transform 2s linear;
+  will-change: transform;
+}
+.container:hover::after {
+  transform: rotate(360deg);
+  transition: transform var(--pirate-move-normal) linear;
+  /*animation: pirate-spin 2s linear infinite;*/
+}
+.container:nth-child(even)::after {
+  left: -21px;
+}
+
+.container:nth-child(odd) {
+  left: 0;
+}
+
+.container:nth-child(even) {
+  left: 50%;
+}
+
+.content {
+  padding: 20px 30px;
+  background-color: var(--pirate-blue-main);
+  position: relative;
+  border-radius: 6px;
+  box-shadow: 6px 7px 30px -3px rgb(0 0 0 / 40%);
+  border: 1px solid var(--pirate-gold);
+  transition-duration: var(--pirate-move-normal);
+  will-change: transform;
+  overflow: hidden;
+  z-index: 9999;
+  
+
+   /* Fade in effect */
+
+   opacity: 0;
+   transform: translateY(40px);
+   transition: opacity 1s ease-out, transform 0.6s ease-out;
+}
+
+.container:nth-child(odd) .content:hover,
+.container:nth-child(even) .content:hover {
+  will-change: transform;
+  transition: transform var(--pirate-move-normal) ease;
+  transform: scale(1.1);
+}
+
+.container:nth-child(odd) .content,
+.container:nth-child(odd) .content:hover {
+  transform-origin: right;
+}
+.container:nth-child(even) .content,
+.container:nth-child(even) .content:hover {
+  transform-origin: left;
+}
+
+.content.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.content h2 {
+  color: var(--pirate-gold);
+}
+
+.content p {
+  color: var(--pirate-txt-light);
+  line-height: 1.5rem;
+}
+time {
+  padding: 0.2rem 0.6rem;
+  background: #bd974e;
+  color: var(--pirate-gold);
+  color: #191a1b;
+  font-size: 0.8rem;
+  border: 1px solid var(--pirate-gold);
+  border-radius: 0.2rem;
+}
+
+.content .pirate-image {
+  width: 100%;
+  border: 1px solid #626773;
+  border-radius: 0.3rem;
+}
+.content .pirate-image:hover {
+  cursor: zoom-in;
+}
+
+/* For smaller screensizes */
+
+@media screen and (max-width: 768px) {
+  .pirate-timeline::after {
+    left: 31px;
+  }
+
+  .pirate-timeline-start {
+    margin: 0 1rem;
+  }
+  .container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+  .container:nth-child(odd)::after,
+  .container:nth-child(even)::after {
+    left: 15px;
+  }
+  .container:nth-child(even) {
+    left: 0;
+  }
+}
+
+/* Pirate Animations */
+
+@keyframes pirate-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
