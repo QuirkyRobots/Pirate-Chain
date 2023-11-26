@@ -129,6 +129,7 @@ h1 {
 .container::after {
   content: "";
   position: absolute;
+  right: -24px;
   width: 25px;
   height: 25px;
   background-image: url(../img/Pirate_Logo_P_Gold.svg);
@@ -151,12 +152,10 @@ h1 {
   transition: transform var(--pirate-move-normal) linear;
   /*animation: pirate-spin 2s linear infinite;*/
 }
-.container:nth-child(odd)::after {
-  left: 24px;
-}
 .container:nth-child(even)::after {
   left: -24px;
 }
+
 .container:nth-child(odd) {
   left: 0;
 }
