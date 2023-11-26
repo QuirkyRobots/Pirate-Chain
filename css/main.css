@@ -257,7 +257,7 @@ footer {
   }
   .container:nth-child(odd)::after,
   .container:nth-child(even)::after {
-    left: 15px;
+    left: 6px;
   }
   .container:nth-child(even) {
     left: 0;
