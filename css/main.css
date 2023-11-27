@@ -235,14 +235,19 @@ time {
 /* Footer */
 
 footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height:100px;
   width: 100%;
   background: rgb(16 18 24 / 63%);
   border-top: 2px solid #212634;
 }
+
 footer .footer-info p {
-color: var(--pirate-txt-light);
+  color: var(--pirate-gold);
 }
+
 /* For smaller screensizes */
 
 @media screen and (max-width: 768px) {
