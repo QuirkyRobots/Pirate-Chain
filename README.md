@@ -1,3 +1,5 @@
+![Pirate_Logo_Wordmark_Gold](https://github.com/QuirkyRobots/pirate-chain-timeline/assets/29914179/1df9f260-e3eb-455d-acfc-83deb99eca72)
+
 # Pirate Chain Timeline Concept
 
 This is a sample timeline concept design, that has been designed to be easy to edit/develop/maintain, locally or in the cloud by anyone.
