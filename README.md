@@ -1,6 +1,13 @@
 # Pirate Chain Timeline Concept - How To Add a Milestone
 
-This is a sample timeline conapt design, that has been designed to be easy to edit/develop/maintain, locally or in the cloud by anyone.
+This is a sample timeline concept design, that has been designed to be easy to edit/develop/maintain, locally or in the cloud by anyone.
+
+Feature:
+
+* Sticky hero section.
+* Fade up and in on scroll effect.
+* Scale and move up on hover.
+* Image lightbox effect.
 
 To update this timeline, simply do the following:
 
