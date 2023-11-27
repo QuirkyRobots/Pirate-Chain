@@ -13,8 +13,8 @@ This is a sample timeline concept design, that has been designed to be easy to e
 
 To update this timeline, simply do the following:
 
-1. Upload your image to the `/img` directory
-2. Edit the `index.html` page with the required changes.
+1. Upload your image to the [/img](./img/) directory
+2. Edit the [index.html](./index.html) page with the required changes.
 
 ![image](https://github.com/QuirkyRobots/pirate-chain-timeline/assets/29914179/9ccb9d42-9fde-4569-a821-87f8a543abeb)
 
