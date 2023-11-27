@@ -23,5 +23,3 @@ To update this timeline, simply do the following:
 \* This can be edited and live previewed on any OS/browser. No additional or complex software or packages are required. It's just simple HTML/CSS/JS.
 
 ## That's it
-
-It's that simple. 30 seconds is all you need.
