@@ -240,7 +240,7 @@ footer {
   background: rgb(16 18 24 / 63%);
   border-top: 2px solid #212634;
 }
-footer .footer-info {
+footer .footer-info p {
 color: var(--pirate-txt-light);
 }
 /* For smaller screensizes */
