@@ -9,7 +9,7 @@ This is a sample timeline concept design, that has been designed to be easy to e
 * Sticky hero section.
 * Fade up and in on scroll effect.
 * Scale and move up and Pirate logo spin, on hover effect.
-* Image lightbox effect, on image click effect.
+* Image lightbox, on image click effect.
 
 ## How to Update or Add a Milestone
 
