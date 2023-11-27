@@ -231,6 +231,7 @@ time {
 .content .pirate-image:hover {
   cursor: zoom-in;
 }
+
 /* Footer */
 
 footer {
@@ -239,7 +240,9 @@ footer {
   background: rgb(16 18 24 / 63%);
   border-top: 2px solid #212634;
 }
-
+footer .footer-info {
+color: var(--pirate-txt-light);
+}
 /* For smaller screensizes */
 
 @media screen and (max-width: 768px) {
