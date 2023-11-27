@@ -1,4 +1,4 @@
-# Pirate Chain Timeline Concept - How To Add a Milestone
+# Pirate Chain Timeline Concept
 
 This is a sample timeline concept design, that has been designed to be easy to edit/develop/maintain, locally or in the cloud by anyone.
 
@@ -9,7 +9,7 @@ This is a sample timeline concept design, that has been designed to be easy to e
 * Scale and move up and Pirate logo spin, on hover effect.
 * Image lightbox effect, on image click effect.
 
-## How to Update
+## How to Update or Add a Milestone
 
 To update this timeline, simply do the following:
 
@@ -17,6 +17,8 @@ To update this timeline, simply do the following:
 2. Edit the `index.html` page with the required changes.
 
 ![image](https://github.com/QuirkyRobots/pirate-chain-timeline/assets/29914179/9ccb9d42-9fde-4569-a821-87f8a543abeb)
+
+\* This can be edited and live previewd on any OS/browser. No addition or complex software or packages are required. It's simple HTML/CSS/JS.
 
 ## That's it
 
