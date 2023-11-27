@@ -20,7 +20,7 @@ To update this timeline, simply do the following:
 
 ![image](https://github.com/QuirkyRobots/pirate-chain-timeline/assets/29914179/9ccb9d42-9fde-4569-a821-87f8a543abeb)
 
-\* This can be edited and live previewd on any OS/browser. No addition or complex software or packages are required. It's simple HTML/CSS/JS.
+\* This can be edited and live previewed on any OS/browser. No additional or complex software or packages are required. It's just simple HTML/CSS/JS.
 
 ## That's it
 
