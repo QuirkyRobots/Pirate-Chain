@@ -254,9 +254,12 @@ h1 {
   cursor: zoom-in;
   outline: 2px solid var(--pirate-gold);
   box-shadow: 0px 10px 23px -3px rgb(0 0 0 / 35%);
-  filter: opacity(1);
   transform: translateY(-3px);
   transition: var(--pirate-move-fast) ease;
+}
+
+.content .pirate-image:hover {
+  filter: opacity(1);
 }
 
 /* Footer */
