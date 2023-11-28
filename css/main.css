@@ -229,7 +229,7 @@ h1 {
   background: #bd974e;
   color: var(--pirate-gold);
   color: #191a1b;
-  font-size: 0.8rem;
+  font-size: 1rem;
   border: 1px solid var(--pirate-gold);
   border-radius: 0.2rem;
 }
@@ -251,6 +251,7 @@ h1 {
   cursor: zoom-in;
   outline: 2px solid var(--pirate-gold);
   box-shadow: 0px 10px 23px -3px rgb(0 0 0 / 35%);
+  will-change: transform;
   transform: translateY(-3px);
   transition: var(--pirate-move-fast) ease;
 }
