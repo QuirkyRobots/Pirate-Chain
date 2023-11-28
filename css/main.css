@@ -34,7 +34,7 @@ body::before {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(26, 29, 38, 0.98);
+  background: rgb(25 28 37 / 98.5%);
   z-index: -1;
 }
 
@@ -60,7 +60,7 @@ h1 {
   justify-content: center;
   align-items: center;
   height: 100dvh;
-  background: rgb(11 11 14 / 33%);
+  background: rgb(0 0 0 / 15%);
 }
 
 .pirate-hero .hero-info {
@@ -186,8 +186,7 @@ h1 {
   background-color: var(--pirate-blue-main);
   position: relative;
   border-radius: 6px;
-  box-shadow: 6px 7px 30px -3px rgb(0 0 0 / 40%);
-  /*border: 1px solid var(--pirate-gold);*/
+  box-shadow: 6px 7px 45px -3px rgb(0 0 0 / 45%);
   transition-duration: var(--pirate-move-normal);
   will-change: transform;
   overflow: hidden;
