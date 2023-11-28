@@ -241,12 +241,15 @@ h1 {
 
 .content .pirate-image {
   width: 100%;
-  /* border: 1px solid #626773; */
+  outline: 2px solid rgb(189 151 78 / 0%);
   border-radius: 0.3rem;
 }
 
 .content .pirate-image:hover {
   cursor: zoom-in;
+  outline: 2px solid var(--pirate-gold);
+  box-shadow: -1px 5px 19px -3px #000000a1;
+  transition: var(--pirate-move-fast) ease;
 }
 
 /* Footer */
