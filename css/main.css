@@ -241,14 +241,15 @@ h1 {
 
 .content .pirate-image {
   width: 100%;
-  outline: 2px solid rgb(189 151 78 / 0%);
   border-radius: 0.3rem;
+  outline: 2px solid rgb(189 151 78 / 0%);
+  transition: var(--pirate-move-fast) ease;
 }
 
 .content .pirate-image:hover {
   cursor: zoom-in;
   outline: 2px solid var(--pirate-gold);
-  box-shadow: -1px 5px 19px -3px #000000a1;
+  box-shadow: 0px 10px 23px -3px rgb(0 0 0 / 40%);
   transition: var(--pirate-move-fast) ease;
 }
 
