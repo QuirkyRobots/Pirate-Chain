@@ -243,15 +243,16 @@ h1 {
   width: 100%;
   border-radius: 0.3rem;
   outline: 2px solid rgb(189 151 78 / 0%);
+  filter: opacity(0.8);
   transition: var(--pirate-move-fast) ease;
-  will-change: transform;
+  will-change: transform, filter;
 }
 
 .content:hover .pirate-image {
   cursor: zoom-in;
   outline: 2px solid var(--pirate-gold);
   box-shadow: 0px 10px 23px -3px rgb(0 0 0 / 35%);
-  will-change: transform;
+  filter: opacity(1);
   transform: translateY(-3px);
   transition: var(--pirate-move-fast) ease;
 }
