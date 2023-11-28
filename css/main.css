@@ -312,3 +312,29 @@ footer .footer-info p {
     transform: rotate(360deg);
   }
 }
+
+/* Scroll Bars */
+
+::-webkit-scrollbar, scrollbar {
+  width: 15px;
+  background: #262626;
+}
+
+/* Track */
+
+::-webkit-scrollbar-track, scrollbar-track {
+  /*box-shadow: inset 0 0 5px grey; */
+  border-radius: 3px;
+}
+/* Handle */
+::-webkit-scrollbar-thumb, scrollbar-thumb {
+  background: #393939; 
+  border-radius: 3px;
+  scrollbar-width:thin;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover, scrollbar-thumb:hover {
+  background: #bd9746;
+  scrollbar-width:auto;
+}
