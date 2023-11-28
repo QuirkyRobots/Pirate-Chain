@@ -16,6 +16,7 @@
 
 html {
   margin: 0;
+  background: var(--pirate-blue-dark);
 }
 
 body {
@@ -60,7 +61,7 @@ h1 {
   justify-content: center;
   align-items: center;
   height: 100dvh;
-  background: rgb(0 0 0 / 15%);
+  background: rgb(0 0 0 / 16%);
 }
 
 .pirate-hero .hero-info {
