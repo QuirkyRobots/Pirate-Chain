@@ -94,14 +94,15 @@ h1 {
 .pirate-timeline-start {
   margin: 0 auto;
   margin-top: 2rem !important;
-  padding: 1rem 2rem;
+  padding: 0.6rem 1.6rem;
   border: 0.45rem solid var(--pirate-gold);
-  width: 200px;
+  width: fit-content;
+  background-color: var(--pirate-blue-main);
 }
 
 .pirate-timeline-start p {
   width: 100%;
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: 600;
   text-transform: uppercase;
   text-align: center;
@@ -147,7 +148,7 @@ h1 {
   background-size: 44%;
   background-repeat: no-repeat;
   background-position: center;
-  background-color: #212634;
+  background-color: var(--pirate-blue-main);
   padding: 12px;
   top: 15px;
   /* border: 4px solid var(--pirate-gold); */
