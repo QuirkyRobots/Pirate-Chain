@@ -5,8 +5,8 @@
   --pirate-txt-light: #dadce1;
   --pirate-discord: #36393f;
 
-  --pirate-move-slow: 3s;
-  --pirate-move-normal: 0.6s;
+  --pirate-move-slow: 1.5s;
+  --pirate-move-normal: 0.4s;
   --pirate-move-fast: 0.2s;
 }
 
@@ -204,7 +204,7 @@ h1 {
 .container:nth-child(odd) .content:hover,
 .container:nth-child(even) .content:hover {
   will-change: transform;
-  transition: transform var(--pirate-move-fast) ease;
+  transition: transform var(--pirate-move-normal) ease;
   transform: scale(1.1);
 }
 
