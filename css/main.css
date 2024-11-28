@@ -204,7 +204,7 @@ h1 {
 .container:nth-child(odd) .content:hover,
 .container:nth-child(even) .content:hover {
   will-change: transform;
-  transition: transform var(--pirate-move-normal) ease;
+  transition: transform var(--pirate-move-fast) ease;
   transform: scale(1.1);
 }
 
